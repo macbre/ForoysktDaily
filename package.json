@@ -1,0 +1,22 @@
+{
+  "name": "faroese",
+  "version": "1.0.0",
+  "description": "",
+  "main": "screenshot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gist.github.com/d928b77911a416727c03a1a650fc748f.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gist.github.com/d928b77911a416727c03a1a650fc748f"
+  },
+  "homepage": "https://gist.github.com/d928b77911a416727c03a1a650fc748f",
+  "dependencies": {
+    "puppeteer": "^5.5.0"
+  }
+}
