@@ -14,6 +14,8 @@ console.log(`Rendering <${url}> ...`);
   const page = await browser.newPage();
   await page.setViewport({width: 1067, height: 600});
   await page.goto(url, {waitUntil: 'networkidle2'});
+  await new Promise(resolve => setTimeout(resolve, 5000));
+
   await page.screenshot({path: 'tweet.png'});
 
   await browser.close();
