@@ -14,9 +14,11 @@
 		height: 600px;
 		background-color: #3972e0;
 		_background-image: url(image.jpg);
-		background-image: url(https://live.staticflickr.com/1779/41934771250_05890abc5c_o_d.jpg);
+		background-image: url(
+			https://live.staticflickr.com/855/41880081050_8347d00274_o_d.jpg
+		);
 		background-size: cover;
-		background-position: 0 48%;
+		background-position: 0 50%;
 		position: relative;
 		overflow: hidden;
 
@@ -31,7 +33,8 @@
 	}
 	article {
    	   _filter: grayscale(.2);
-	   filter: brightness(1.3) saturate(1.2) contrast(1.1);
+	   filter: contrast(1.2) saturate(0.95);
+	   _filter: brightness(1.3) saturate(1.2) contrast(1.1);
 	   _width: 1267px;
 	}
 
@@ -43,7 +46,7 @@
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		_background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.5) 100%);
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.5) 100%);
 		text-shadow: 0 0 10px black;
 		opacity: .85;
 		color: #fff;
@@ -89,23 +92,31 @@
 
 		display: none;
 	}
+
+	/* word at the top */
+	.up dl {
+		top: 0;
+		bottom: auto;
+		padding-top: 50px;
+  		background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.5) 100%);
+	}
   </style>
 </head>
 
 <body>
-<article>
+<article class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-Borðoy
-<span class="kind">kv</span>
+fótbóltsdystur
+<span class="kind">k</span>
 <span class="ipa">
-boːrɔi
+fɔutpœl̥(t)sˌtɪstʊɹ
 </span>
 </dt>
 <dd>
-The Headland Island
+football game
 </dd>
 </dl>
 </article>
