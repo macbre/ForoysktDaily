@@ -6,6 +6,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
+  <!-- https://latitude.to/articles-by-country/fo/faroe-islands/272509/valur  -->
+  <meta name=”geo.position” content="62.1537427184 -7.159832694">
+
   <style>
 	html, body { margin: 0; padding: 0 }
 
@@ -15,17 +18,17 @@
 		background-color: #3972e0;
 		_background-image: url(image.jpg);
 		background-image: url(
-https://lh3.googleusercontent.com/pw/AM-JKLUsXKR5epqSVB-aXzYl0tiiPl2bkCKtmr_26xLoC-pI6vuA5hiM_Ur_xwJ0pQ_x6WRusjbqjTSvpq9fqqJTUA2KbcWRBxkrCvsqgbIiQqSUeaxFMeyse_PXrewEdDeelBs71cy9Qt9kx3HjrZRYrywf1g=w1408-h1876-no?authuser=0
+https://live.staticflickr.com/65535/51969919124_2ca4bf4a05_o_d.jpg
 );
 		background-size: cover;
-		background-position: 0 55%;
+		background-position: 0 25%;
 		position: relative;
 		overflow: hidden;
 
 		font-family: "EB Garamond";
 
 		_background-size: inherit;
-		background-position: -40px 55%;
+		_background-position: -40px 55%;
 	}
 	
 	#overlay {
@@ -37,9 +40,9 @@ https://lh3.googleusercontent.com/pw/AM-JKLUsXKR5epqSVB-aXzYl0tiiPl2bkCKtmr_26xL
 	article {
    	   _filter: grayscale(.2);
 	   _filter: saturate(1.2) brightness(0.9) contrast(1.1);
-	   filter: brightness(1.1) saturate(1) contrast(1.1);
+	   _filter: brightness(1.1) saturate(1) contrast(1.1);
   	   _filter: brightness(1) saturate(1) contrast(1.1);
-	   width: 1220px;
+	   -width: 1220px;
 	}
 
 	dl {
@@ -50,7 +53,7 @@ https://lh3.googleusercontent.com/pw/AM-JKLUsXKR5epqSVB-aXzYl0tiiPl2bkCKtmr_26xL
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		_background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.5) 100%);
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.5) 100%);
 		text-shadow: 0 0 10px black;
 		opacity: .9;
 		color: #fff;
@@ -104,7 +107,34 @@ https://lh3.googleusercontent.com/pw/AM-JKLUsXKR5epqSVB-aXzYl0tiiPl2bkCKtmr_26xL
 		padding-top: 50px;
   		background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.5) 100%);
 	}
+
+        #map { display: none }
+
+        #map.leaflet-container {
+		display: block;
+		width: 350px;
+		height: 350px;
+		position: absolute;
+		top: -75px;
+		right: -75px;
+		border-radius: 0 0 0 100%;
+
+		opacity: .75;
+		filter: drop-shadow(0px 0px 50px white);
+		border: solid 3px rgba(255, 255, 255, 0.5);
+		border-top: none;
+		border-right: none;
+	}
+
+	#map .leaflet-control-container {
+		display: none;
+	}
   </style>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
+
 </head>
 
 <body>
@@ -113,15 +143,55 @@ https://lh3.googleusercontent.com/pw/AM-JKLUsXKR5epqSVB-aXzYl0tiiPl2bkCKtmr_26xL
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-íri
-<span class="kind">k</span>
-<span class="ipa">ʊiːɹɪ
+Válur
+<span class="kind"></span>
+<span class="ipa">vɔalʊɹ
 </span>
 </dt>
 <dd>
-Irishman
+Rounded Hill
 </dd>
 </dl>
+<div id="map"></div>
 </article>
+
+<script>
+(function() {
+  const geo = document.querySelector('meta[name]');
+
+  if (!geo) return;
+  console.log('geo', geo);
+
+  const [lat, lon] = geo.getAttribute('content').split(' ').map(parseFloat);
+  console.log([lat, lon]);
+
+  // http://maps.stamen.com/#toner/12/37.7706/-122.3782
+  const map = L.map('map').setView([lat, lon], 7);
+  L.marker([lat, lon]).addTo(map);
+
+  // https://leaflet-extras.github.io/leaflet-providers/preview/
+  var tiles = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 1,
+	maxZoom: 16,
+	ext: 'jpg'
+  });
+
+  tiles.addTo(map);
+
+/**
+  var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+	maxZoom: 18,
+	// attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+	// 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	id: 'mapbox/streets-v11',
+	tileSize: 512,
+	zoomOffset: -1
+  }).addTo(map);
+**/
+})();
+</script>
+
 </body>
 </html>
