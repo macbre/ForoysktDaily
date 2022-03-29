@@ -186,7 +186,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   console.log([lat, lon]);
 
   // http://maps.stamen.com/#toner/12/37.7706/-122.3782
-  const map = L.map('map').setView([lat, lon], 8);
+  const map = L.map('map').setView([lat - 0.05, lon + 0.3], 8);
   L.marker([lat, lon]).addTo(map);
 
   // https://leaflet-extras.github.io/leaflet-providers/preview/#filter=Stamen.Watercolor
