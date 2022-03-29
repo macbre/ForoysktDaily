@@ -112,18 +112,34 @@ https://live.staticflickr.com/65535/51969919124_2ca4bf4a05_o_d.jpg
 
         #map.leaflet-container {
 		display: block;
-		width: 350px;
-		height: 350px;
+		width: 450px;
+		height: 450px;
 		position: absolute;
-		top: -75px;
-		right: -75px;
+		top: -105px;
+		right: -105px;
 		border-radius: 0 0 0 100%;
 
-		opacity: .75;
-		filter: drop-shadow(0px 0px 50px white);
-		border: solid 3px rgba(255, 255, 255, 0.5);
+		opacity: .65;
+		filter: saturate(0.75);
+		outline: solid 10px rgba(255,255,255, 0.5);
+		border: solid 10px rgba(255, 255, 255, 0.75);
 		border-top: none;
 		border-right: none;
+	}
+
+	#map .contrib {
+		z-index: 500;
+		position: absolute;
+		top: 180px;
+		right: 20px;
+		background: rgba(255,255,255,.75);
+		display: block;
+		padding: .5em 1em;
+		font-family: Inter;
+		letter-spacing: -0.5px;
+		font-size: 14px;
+		color: #333;
+		transform: rotateZ(90deg);
 	}
 
 	#map .leaflet-control-container {
@@ -152,7 +168,11 @@ Válur
 Rounded Hill
 </dd>
 </dl>
-<div id="map"></div>
+<div id="map">
+<span class="contrib">
+Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>-->.
+</span>
+</div>
 </article>
 
 <script>
@@ -166,10 +186,10 @@ Rounded Hill
   console.log([lat, lon]);
 
   // http://maps.stamen.com/#toner/12/37.7706/-122.3782
-  const map = L.map('map').setView([lat, lon], 7);
+  const map = L.map('map').setView([lat, lon], 8);
   L.marker([lat, lon]).addTo(map);
 
-  // https://leaflet-extras.github.io/leaflet-providers/preview/
+  // https://leaflet-extras.github.io/leaflet-providers/preview/#filter=Stamen.Watercolor
   var tiles = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
