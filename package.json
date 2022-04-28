@@ -17,6 +17,7 @@
   },
   "homepage": "https://gist.github.com/d928b77911a416727c03a1a650fc748f",
   "dependencies": {
+    "npmlog": "^6.0.2",
     "puppeteer": "^13.7.0"
   }
 }
