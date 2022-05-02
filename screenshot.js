@@ -13,9 +13,18 @@ log.info('Rendering', `<${url}> ...`);
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
+
+  page.on('requestfinished', (req) => {
+    log.info('Response', `<${req.url()}>`);
+  });
+
   await page.setViewport({width: 1067, height: 600, deviceScaleFactor: 2});
+
+  const then = Date.now();
   await page.goto(url, {waitUntil: 'networkidle0'});
-  log.info('Page loaded');
+  const took = Date.now() - then;
+
+  log.info(`Page loaded`, `in ${took} ms`);
   // await new Promise(resolve => setTimeout(resolve, 5000));
 
   log.info('Taking a screenshot');
