@@ -8,7 +8,7 @@
 
   <!-- https://latitude.to/articles-by-country/fo/faroe-islands/272509/valur -->
   <!-- https://geohack.toolforge.org/geohack.php?pagename=Funningur&params=62_17_17_N_6_58_2_W_region:DK_type:city(47) -->
-  <meta name=”geo.position” content="61.508333 -6.758056">
+  <!-- <meta name=”geo.position” content="61.508333 -6.758056"> -->
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -19,17 +19,17 @@
 		background-color: #3972e0;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52050623318_0f858cf8b6_o_d.jpg
+			https://live.staticflickr.com/65535/52065869102_2848796723_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 100%;
+		background-position: 0 75%;
 		position: relative;
 		overflow: hidden;
 
 		font-family: "EB Garamond";
 
 		_background-size: inherit;
-		background-position: -660px 35%;
+		_background-position: -660px 35%;
 	}
 
 	#overlay {
@@ -42,8 +42,8 @@
    	   _filter: grayscale(.2);
 	   _filter: saturate(1.2) brightness(0.9) contrast(1.1);
 	   _filter: brightness(1.35) saturate(1) contrast(1);
-  	   filter: brightness(1) saturate(1) contrast(1.1);
-	   width: 1800px;
+  	   _filter: brightness(1) saturate(1) contrast(1.1);
+	   width: 1100px;
 	}
 
 	dl {
@@ -54,7 +54,7 @@
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		_background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.25) 100%);
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.25) 100%);
 		text-shadow: 0 0 10px black;
 		opacity: .9;
 		color: #fff;
@@ -65,6 +65,10 @@
 		font-weight: bold;
 		font-size: 85px;
 		letter-spacing: -2px;
+	}
+
+	dt em {
+		font-style: normal;
 	}
 
 	.kind, .ipa {
@@ -88,6 +92,11 @@
 
 	dd {
 		font-size: 55px;
+	}
+
+	/* hidden word */
+	dt em {
+		visibility: hidden;
 	}
 
 	#logo {
@@ -156,19 +165,19 @@
 </head>
 
 <body>
-<article class="up">
+<article _class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-Hov
-<span class="kind">h</span><!-- kallkyn kvengin  -->
+<em>hýruvognur</em>
+<span class="kind">k</span><!-- kallkyn kvengin  -->
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ho:f
+hʊiːɹʊvɔknʊɹ
 </span>
 </dt>
 <dd>
-temple
+taxi / vehicle that signs on for a job
 </dd>
 </dl>
 <div id="map">
