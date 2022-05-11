@@ -1,11 +1,18 @@
 #!/usr/bin/env node
-const puppeteer = require('puppeteer');
+import puppeteer from 'puppeteer';
 
-const path = require('path');
-const fs = require('fs');
-const log = require('npmlog');
+import path from 'path';
+import fs from 'fs/promises';
+import log from 'npmlog';
 
-const dir = path.dirname(fs.realpathSync(__filename));
+import imagemin from 'imagemin';
+import imageminPngquant from 'imagemin-pngquant';
+
+// get this directory
+import {fileURLToPath} from 'url';
+const __filename = fileURLToPath(import.meta.url);
+
+const dir = path.dirname(await fs.realpath(__filename));
 const url = 'file://' + dir + '/index.html';
 
 log.info('Rendering', `<${url}> ...`);
@@ -29,6 +36,21 @@ log.info('Rendering', `<${url}> ...`);
 
   log.info('Taking a screenshot');
   await page.screenshot({path: 'tweet.png'});
+
+  // optimize the PNG file
+  log.info('imagemin', 'Optimizing tweet.png ...');
+
+  await imagemin(['tweet.png'], {
+      destination: 'build/',
+      plugins: [
+          imageminPngquant({
+              quality: [0.6, 0.8]
+          })
+      ]
+  });
+
+  await fs.rm('tweet.png');
+  await fs.rename('build/tweet.png', 'tweet.png');
 
   await browser.close();
   log.info('Done');
