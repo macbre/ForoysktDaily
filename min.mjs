@@ -9,7 +9,7 @@ import log from 'npmlog';
     log.info('imagemin', 'Optimizing tweet.png ...');
 
     await imagemin(['tweet.png'], {
-        destination: 'build/tweet.png',
+        destination: 'build/',
         plugins: [
             imageminPngquant({
                 quality: [0.6, 0.8]
