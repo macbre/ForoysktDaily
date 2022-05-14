@@ -98,6 +98,10 @@
 		font-size: 55px;
 	}
 
+	dd[lang="pl"] {
+		display: none;
+	}
+
 	/* hidden word */
 /* 	dt em {
 		visibility: hidden;
@@ -160,6 +164,26 @@
 	#map .leaflet-control-container {
 		display: none;
 	}
+
+	/* 
+Instagram landscape photo: 1080 x 608 px (1.91:1 ratio)
+	 */
+	body.instagram #wrapper {
+		width: 1080px;
+		height: 608px;
+	}
+
+	body.instagram #map.leaflet-container {
+		left: 727px;
+	}
+
+	body.instagram dd[lang="en"] {
+		display: none;
+	}
+
+	body.instagram dd[lang="pl"] {
+		display: block;
+	}
   </style>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
@@ -168,7 +192,8 @@
 
 </head>
 
-<body><div id="wrapper">
+<body>
+<div id="wrapper">
 <article _class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
@@ -186,8 +211,11 @@
 tvøːɹɔiɹɪ
 </span>
 </dt>
-<dd>
+<dd lang="en">
 transversing low sandy spit
+</dd>
+<dd lang="pl">
+poprzeczna mierzeja
 </dd>
 </dl>
 <div id="map">
