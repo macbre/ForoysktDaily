@@ -25,8 +25,6 @@ log.info('Rendering', `<${url}> ...`);
     log.info('Response', `<${req.url()}>`);
   });
 
-  await page.setViewport({width: 1067, height: 600, deviceScaleFactor: 2});
-
   const then = Date.now();
   await page.goto(url, {waitUntil: 'networkidle0'});
   const took = Date.now() - then;
@@ -34,8 +32,17 @@ log.info('Rendering', `<${url}> ...`);
   log.info(`Page loaded`, `in ${took} ms`);
   // await new Promise(resolve => setTimeout(resolve, 5000));
 
-  log.info('Taking a screenshot');
+  log.info('Taking a screenshot for Tweeter');
+  await page.setViewport({width: 1067, height: 600, deviceScaleFactor: 2});
   await page.screenshot({path: 'tweet.png'});
+
+  // Instagram landscape photo: 1080 x 608 px (1.91:1 ratio)
+  log.info('Taking a screenshot for Instagram');
+  await page.evaluate(() => {
+    document.body.classList.add('instagram');
+  });
+  await page.setViewport({width: 1080, height: 608, deviceScaleFactor: 2});
+  await page.screenshot({path: 'instagram.jpg'});
 
   // optimize the PNG file
   log.info('imagemin', 'Optimizing tweet.png ...');
