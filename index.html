@@ -98,10 +98,6 @@
 		font-size: 55px;
 	}
 
-	dd[lang="pl"] {
-		display: none;
-	}
-
 	/* hidden word */
 /* 	dt em {
 		visibility: hidden;
@@ -177,11 +173,16 @@ Instagram landscape photo: 1080 x 608 px (1.91:1 ratio)
 		left: 727px;
 	}
 
-	body.instagram dd[lang="en"] {
+	/* hide Polish by default */
+	*[lang="pl"] {
 		display: none;
 	}
 
-	body.instagram dd[lang="pl"] {
+	body.instagram *[lang="en"] {
+		display: none;
+	}
+
+	body.instagram *[lang="pl"] {
 		display: block;
 	}
   </style>
