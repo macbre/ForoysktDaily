@@ -36,12 +36,13 @@ log.info('Rendering', `<${url}> ...`);
   await page.setViewport({width: 1067, height: 600, deviceScaleFactor: 2});
   await page.screenshot({path: 'tweet.png'});
 
-  // Instagram landscape photo: 1080 x 608 px (1.91:1 ratio)
+  // ~~ Instagram landscape photo: 1080 x 608 px (1.91:1 ratio) ~~
+  // At a standard width of 1080 pixels, Instagram keeps your photo its original size
   log.info('Taking a screenshot for Instagram');
   await page.evaluate(() => {
     document.body.classList.add('instagram');
   });
-  await page.setViewport({width: 1080, height: 608, deviceScaleFactor: 2});
+  await page.setViewport({width: 1080, height: 1080, deviceScaleFactor: 2});
   await page.screenshot({path: 'instagram.jpg'});
 
   // optimize the PNG file
