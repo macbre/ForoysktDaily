@@ -161,16 +161,81 @@
 	}
 
 	/* 
+	 ********************************************************************************************************************************************
 Instagram landscape photo: 1080 x 608 px (1.91:1 ratio)
 At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	 */
 	body.instagram #wrapper {
 		width: 1080px;
 		height: 1080px;
+		background-color: rgba(114, 149, 190, 1);	
+	}
+
+	body.instagram #logo {
+		filter: invert(1) opacity(0.3);
+		width: 450px;
+		position: absolute;
+		left: -150px;
+		top: -150px;
+		transform: rotate(-45deg);
+		display: block;
+	}
+
+	body.instagram #overlay {
+		opacity: 0.9;
 	}
 	
 	body.instagram dl {
 		width: 1080px;
+		padding-bottom: 120px;
+		text-shadow: none;
+		background: linear-gradient(180deg, rgba(114, 149, 190,0) 0%, rgba(114, 149, 190,0.1) 15%, rgba(114, 149, 190,.25) 100%);
+	}
+
+	body.instagram article dt {
+		transform: rotate(-4deg);
+		transform-origin: left;
+	}
+
+	body.instagram article dt em {
+		font-size: 150px;
+		background-color: rgba(114, 149, 190, .65);
+		padding: 5px 35px;
+		display: inline-block;
+		border-bottom: solid 8px rgba(114, 149, 190, .85);
+	}
+
+	body.instagram article dt .kind {
+		background-color: rgba(19, 43, 70, .9);
+		padding: 5px 15px;
+		display: inline-block;
+		font-size: 45px;
+		position: relative;
+		top: -140px;
+		left: -95px;
+		transform: rotate(2deg);
+	}
+
+	body.instagram article dd[lang="pl"] {
+		font-size: 90px;
+		background-color: rgba(114, 149, 190, .45);
+		padding: 5px 35px;
+		display: inline-block !important;
+		transform: rotate(3deg);
+		transform-origin: left;
+		margin-top: -50px;
+	}
+
+	body.instagram .ipa {
+		display: block;
+		position: absolute;
+		transform: rotate(4deg);
+		bottom: -235px;
+		right: 100px;
+		font-size: 60px;
+		font-family: 'Times New Roman', Times, serif;
+		letter-spacing: -1px;
+		text-shadow: 0 0 10px black;
 	}
 
 	body.instagram #map.leaflet-container {
