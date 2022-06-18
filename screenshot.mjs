@@ -41,6 +41,7 @@ log.info('Rendering', `<${url}> ...`);
   log.info('Taking a screenshot for Instagram');
   await page.evaluate(() => {
     document.body.classList.add('instagram');
+    document.body.querySelector('article').classList.remove('up');
   });
   await page.setViewport({width: 1080, height: 1080, deviceScaleFactor: 2});
   await page.screenshot({path: 'instagram.jpg'});
