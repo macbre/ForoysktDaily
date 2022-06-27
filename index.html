@@ -8,7 +8,7 @@
 
   <!-- https://latitude.to/articles-by-country/fo/faroe-islands/272509/valur -->
   <!-- https://geohack.toolforge.org/geohack.php?pagename=Funningur&params=62_17_17_N_6_58_2_W_region:DK_type:city(47) -->
-  <meta name=”geo.position” content="62.1425 -6.702222">
+  <!-- <meta name=”geo.position” content="62.1425 -6.702222"> -->
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -31,22 +31,22 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52167576319_6239c4c39e_o_d.jpg
+			https://live.staticflickr.com/65535/52175154949_77a887353a_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 30%;
 
 		/* filters  */
-		_filter: grayscale(.2) sepia(.2) contrast(0.99) saturate(1.2);
+		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.4);
 		_filter: saturate(1.2) brightness(0.9) contrast(1.1);
 		_filter: brightness(1.35) saturate(1) contrast(1);
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: brightness(1.0) contrast(1.3) saturate(1.2);
 
 		/* sizes  */
-		/* width: 1300px;
+		width: 1150px;
 		_background-size: inherit;
-		background-position: 0px 100%; */
+		background-position: 0px 85%;
 	}
 
 	dl {
@@ -184,6 +184,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	body.instagram #overlay {
 		opacity: 0.9;
 		width: 1750px;
+		background-position: -300px 50%;
 	}
 	
 	body.instagram dl {
@@ -286,28 +287,28 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 <body _class="instagram">
 <div id="wrapper">
-<article class="up">
+<article _class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Lamba</em>
+<em>eini kort</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">k</span>
+<span class="kind"></span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-lampa
+
 </span>
 </dt>
 <dd lang="en">
-lamb outfield
+deck of cards
 </dd>
 <dd lang="pl">
-Owcze Pastwisko
+talia kart
 </dd>
 </dl>
 <div id="map">
@@ -330,8 +331,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // http://maps.stamen.com/#toner/12/37.7706/-122.3782
 //   const center = [lat - 0.05, lon + 0.3]; const zoom = 8;// from the pin
 //   const center = [62.011667, -6.7675]; const zoom = 8;// Tórshavn
-  const center = [(62.011667 + lat) / 2, (-6.7675 + lon) / 2]; const zoom = 8;// between Tórshavn and the pin
 
+  const center = [(62.011667 + lat) / 2, (-6.7675 + lon) / 2]; const zoom = 8;// between Tórshavn and the pin
   const map = L.map('map').setView(center, zoom);
   L.marker([lat, lon]).addTo(map);
 
