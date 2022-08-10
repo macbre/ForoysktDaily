@@ -8,6 +8,8 @@ import log from 'npmlog';
 import imagemin from 'imagemin';
 import imageminPngquant from 'imagemin-pngquant';
 
+import {setTimeout} from "timers/promises";
+
 // get this directory
 import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -44,6 +46,7 @@ log.info('Rendering', `<${url}> ...`);
     document.body.querySelector('article').classList.remove('up');
   });
   await page.setViewport({width: 1080, height: 1080, deviceScaleFactor: 2});
+  await setTimeout(1000); // give some non-Latin fonts a chance to load
   await page.screenshot({path: 'instagram.jpg'});
 
   // optimize the PNG file
