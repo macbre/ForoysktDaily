@@ -34,7 +34,7 @@ log.info('Rendering', `<${url}> ...`);
   log.info(`Page loaded`, `in ${took} ms`);
   // await new Promise(resolve => setTimeout(resolve, 5000));
 
-  log.info('Taking a screenshot for Tweeter');
+  log.info('Taking a screenshot for Twitter');
   await page.setViewport({width: 1067, height: 600, deviceScaleFactor: 2});
   await page.screenshot({path: 'tweet.png'});
 
