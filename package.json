@@ -20,6 +20,6 @@
     "imagemin": "^8.0.1",
     "imagemin-pngquant": "^9.0.2",
     "npmlog": "^6.0.2",
-    "puppeteer": "^18.0.4"
+    "puppeteer": "^18.2.1"
   }
 }
