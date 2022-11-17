@@ -8,7 +8,7 @@
 
   <!-- https://latitude.to/articles-by-country/fo/faroe-islands/272509/valur -->
   <!-- https://geohack.toolforge.org/geohack.php?pagename=Funningur&params=62_17_17_N_6_58_2_W_region:DK_type:city(47) -->
-  <meta name=”geo.position” content="62.263611, -6.844444 ">
+  <meta name=”geo.position” content="62.255833, -6.534167 ">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -31,10 +31,10 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52498578152_36f3e3a688_o_d.jpg
+			https://live.staticflickr.com/65535/52156401548_8f33b2dd41_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 30%;
+		background-position: 0 50%;
 
 		/* filters  */
 		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.6);
@@ -42,12 +42,13 @@
 		_filter: brightness(1.4) saturate(0.9) contrast(1.35);
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: contrast(1.05) saturate(1.05);
-		filter: brightness(1.1) contrast(0.8) saturate(1.2);
+		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
+		filter: contrast(0.95) saturate(1.05) brightness(1.1);
 
 		/* sizes  */
-		width: 1150px;
+		/* width: 1150px;
 		_background-size: inherit;
-		background-position: -30px 30%;
+		background-position: -30px 30%; */
 	}
 
 	dl {
@@ -58,7 +59,7 @@
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		_background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.35) 100%);
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.35) 100%);
 		text-shadow: 0 0 10px black;
 		opacity: .9;
 		color: #fff;
@@ -173,8 +174,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		/* filter: invert(1) opacity(0.4); */
-		filter: invert(0) opacity(0.2);
+		filter: invert(1) opacity(0.4);
+		/* filter: invert(0) opacity(0.2); */
 		width: 450px;
 		position: absolute;
 		left: -150px;
@@ -186,11 +187,11 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	body.instagram #overlay {
 		opacity: 0.9;
 		width: 1600px;
-		background-position: -710px -450px; /** <-------------- **/
-		height: 1900px;
+		background-position: -780px -400px; /** <-------------- **/
+		height: 1600px;
 
 		/* filter: contrast(1.2) brightness(1.1) saturate(1.2); */
-		filter: contrast(1) brightness(1.05) saturate(1.4);
+		/* filter: contrast(1) brightness(1.05) saturate(1.4); */
 	}
 
 	body.instagram dl {
@@ -300,28 +301,28 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 <body _class="instagram">
 <div id="wrapper">
-<article class="up">
+<article _class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Hellurnar</em>
+<em>Árnafjørður</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">kv</span>
+<span class="kind">k</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈhɛdlʊɹnaɹ
+ɔtnaˌfjøːɹʊɹ
 </span>
 </dt>
 <dd lang="en">
-Flagstones
+Eagles Fiord
 </dd>
 <dd lang="pl">
-Kamienie
+Fiord Orłów
 </dd>
 </dl>
 <div id="map">
