@@ -6,9 +6,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
-  <!-- https://latitude.to/articles-by-country/fo/faroe-islands/272509/valur -->
-  <!-- https://geohack.toolforge.org/geohack.php?pagename=Funningur&params=62_17_17_N_6_58_2_W_region:DK_type:city(47) -->
-  <meta name=”geo.position” content="62.2750, -6.5136">
+  <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
+  <meta name=”geo.position” content="61.6378, -6.9219">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -31,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52647244858_35e158b267_o_d.jpg
+			https://live.staticflickr.com/65535/52071393931_df27f4ab11_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 100%;
@@ -41,14 +40,14 @@
 		_filter: saturate(1.15) brightness(1.15) contrast(1.05);
 		_filter: brightness(1.2) contrast(1.25) saturate(0.9);
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
-		filter: contrast(1.1) saturate(1.05);
+		filter: contrast(1.05) saturate(1.1) brightness(1.02);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
 		_filter: contrast(0.95) saturate(1.05) brightness(1.1);
 
 		/* sizes  */
-		/* width: 1250px;
+		width: 1250px;
 		_background-size: inherit;
-		background-position: 0px 100%; */
+		background-position: -120px 0%;
 	}
 
 	dl {
@@ -120,7 +119,7 @@
 		top: 0;
 		bottom: auto;
 		padding-top: 50px;
-  		_background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,.25) 100%);
+  		background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 5%, rgba(0,0,0,.1) 100%);
 	}
 
         #map { display: none }
@@ -188,7 +187,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.9;
 		width: 1600px;
 		height: 1600px;
-		background-position: -300px -220px; /** <-------------- **/
+		background-position: -400px -50px; /** <-------------- **/
 		height: 1300px;
 
 		/* filter: contrast(1.2) brightness(1.1) saturate(1.2); */
@@ -303,12 +302,12 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 <body _class="instagram">
 <div id="wrapper">
-<article _class="up">
+<article class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Norðtoftir</em>
+<em>Sandvík</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
@@ -317,14 +316,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 -->
 <span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈnoːɹˌtɔftɪɹ
+ˈsanvʊik
 </span>
 </dt>
 <dd lang="en">
-Northern Ruins
+Sandy Bay
 </dd>
 <dd lang="pl">
-Północne Ruiny
+Piaszczysta Zatoka
 </dd>
 </dl>
 <div id="map">
