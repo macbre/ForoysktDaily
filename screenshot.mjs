@@ -27,6 +27,8 @@ log.info('Rendering', `<${url}> ...`);
     log.info('Response', `<${req.url()}>`);
   });
 
+  page.on('console', msg => log.info('log: ', msg.text()));
+
   const then = Date.now();
   await page.goto(url, {waitUntil: 'networkidle0'});
   const took = Date.now() - then;
