@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="62.0410, -6.9550">
+  <meta name=”geo.position” content="62.0183, -6.9128">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,10 +30,10 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52892422419_4503af3c96_o_d.jpg
+			https://live.staticflickr.com/65535/52892680288_ed0c6db705_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 25%;
+		background-position: 0 75%;
 
 		/* filters  */
 		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.6);
@@ -42,7 +42,7 @@
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: contrast(1.1) saturate(1.1) brightness(1.15) opacity(0.9);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
-		filter: contrast(1.15) saturate(1.1);
+		_filter: contrast(1.15) saturate(1.1);
 
 		/* sizes  */
 		/* width: 1350px;
@@ -187,8 +187,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.9;
 		width: 1600px;
 		height: 1600px;
-		background-position: -300px -20px; /** <-------------- **/
-		height: 1100px;
+		background-position: -500px -175px; /** <-------------- **/
+		height: 1300px;
 
 		/* filter: contrast(1.2) brightness(1.1) saturate(1.2); */
 		/* filter: contrast(1) brightness(1.1) saturate(1.2); */
@@ -313,7 +313,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Norðradalur</em>
+<em>Syðradalur</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
@@ -322,14 +322,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 -->
 <span class="kind">k</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈnoːɹaˌdɛalʊɹ
+siːɹaˌdɛalʊɹ
 </span>
 </dt>
 <dd lang="en">
-Northern Valley
+Southern Valley
 </dd>
 <dd lang="pl">
-Północna Dolina
+Południowa Dolina
 </dd>
 </dl>
 <div id="map">
@@ -348,7 +348,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
 
   // rotate the tiles for instagram
   function rotateTheTiles() {
-  	const code = word.charCodeAt(0) + 10;
+  	const code = word.charCodeAt(0) + 20;
 	const rotation = (code % 16) + -12;
 	// const rotation = -12;
 
