@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="62.0183, -6.9128">
+  <meta name=”geo.position” content="61.8333, -6.6500">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52892680288_ed0c6db705_o_d.jpg
+			https://live.staticflickr.com/65535/52919417901_59f75b9621_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 75%;
@@ -45,9 +45,9 @@
 		_filter: contrast(1.15) saturate(1.1);
 
 		/* sizes  */
-		/* width: 1350px;
+		width: 1350px;
 		_background-size: inherit;
-		background-position: -200px 60%; */
+		background-position: -250px 60%;
 	}
 
 	dl {
@@ -187,7 +187,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.9;
 		width: 1600px;
 		height: 1600px;
-		background-position: -500px -175px; /** <-------------- **/
+		background-position: -120px -200px; /** <-------------- **/
 		height: 1300px;
 
 		/* filter: contrast(1.2) brightness(1.1) saturate(1.2); */
@@ -313,23 +313,24 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Syðradalur</em>
+<em>Skálavík</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">k</span>
+<span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-siːɹaˌdɛalʊɹ
+ˈskɔalavʊik
+
 </span>
 </dt>
 <dd lang="en">
-Southern Valley
+Bowl-shaped Bay
 </dd>
 <dd lang="pl">
-Południowa Dolina
+Zatoka w kształcie miski
 </dd>
 </dl>
 <div id="map">
@@ -348,7 +349,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
 
   // rotate the tiles for instagram
   function rotateTheTiles() {
-  	const code = word.charCodeAt(0) + 20;
+  	const code = word.charCodeAt(0) + 4;
 	const rotation = (code % 16) + -12;
 	// const rotation = -12;
 
