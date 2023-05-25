@@ -20,7 +20,7 @@ const url = 'file://' + dir + '/index.html';
 log.info('Rendering', `<${url}> ...`);
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: 'new'});
   const page = await browser.newPage();
 
   page.on('requestfinished', (req) => {
