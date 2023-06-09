@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="61.7931, -6.7369">
+  <meta name=”geo.position” content="62.1000, -7.0000">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,10 +30,10 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52917875518_7e46ca7baf_o_d.jpg
+			https://live.staticflickr.com/65535/52960346911_ce629c871c_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 50%;
+		background-position: 0 80%;
 
 		/* filters  */
 		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.6);
@@ -42,12 +42,12 @@
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: contrast(1.1) saturate(1.1) brightness(1.15) opacity(0.9);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
-		filter: contrast(1.1) saturate(1.2);
+		filter: contrast(1.2) saturate(1.2);
 
 		/* sizes  */
-		width: 1400px;
+		/* width: 1400px;
 		_background-size: inherit;
-		background-position: -100px 90%;
+		background-position: -100px 90%; */
 	}
 
 	dl {
@@ -173,8 +173,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		filter: invert(1) opacity(0.4);
-		/* filter: invert(0) opacity(0.2); */
+		/* filter: invert(1) opacity(0.4); */
+		filter: invert(0) opacity(0.2);
 		width: 450px;
 		position: absolute;
 		left: -150px;
@@ -187,12 +187,12 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.9;
 		width: 1600px;
 		height: 1600px;
-		background-position: -300px -200px; /** <-------------- **/
+		background-position: -200px -220px; /** <-------------- **/
 		height: 1300px;
 
 		/* filter: contrast(1.2) brightness(1.1) saturate(1.2); */
 		/* filter: contrast(1) brightness(1.1) saturate(1.2); */
-		/* filter: contrast(1.1) saturate(1.1); */
+		filter: contrast(1.5) saturate(1.1);
 	}
 
 	body.instagram dl {
@@ -216,12 +216,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		position: relative;
 	}
 
+	/* the Faroese word */
 	body.instagram article dt em {
 		font-size: 150px;
 		background-color: rgba(114, 149, 190, .85);
 		padding: 5px 35px;
 		display: inline-block;
 		border-bottom: solid 8px rgba(114, 149, 190, .85);
+		letter-spacing: -0.05em;
 	}
 
 	body.instagram article dt .kind {
@@ -235,6 +237,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		transform: rotate(2deg);
 	}
 
+	/* the translations / meaning */
 	body.instagram article dd[lang="pl"] {
 		font-size: 90px;
 		background-color: rgba(114, 149, 190, .75);
@@ -243,18 +246,27 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		transform: rotate(3deg);
 		transform-origin: left;
 		margin-top: -30px;
+		letter-spacing: -0.05em;
 	}
 
 	body.instagram .instagram-ipa {
 		color: #fff;
+		background-color: rgba(19, 43, 70, .75);
 		display: block !important;
 		position: absolute;
-		bottom: 50px;
-		right: 50px;
-		font-size: 60px;
-		font-family: 'Times New Roman', Times, serif;
-		letter-spacing: -1px;
-		text-shadow: 0 0 10px black;
+		bottom: 0px;
+		left: 0px;
+		font-size: 30px;
+		/* font-family: 'Times New Roman', Times, serif; */
+		font-family: sans-serif;
+		/* text-shadow: 0 0 10px black; */
+		padding: .2em .5em;
+	}
+
+	body.instagram .instagram-ipa::before {
+		content: '💬';
+		font-size: 0.8em;
+    	vertical-align: middle;
 	}
 
 	body.instagram .ipa {
@@ -313,23 +325,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Skarvanes</em>
+<em>Skælingur</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">h</span>
+<span class="kind">k</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈskaɹvaneːs
+ˈskɛaːlɪŋgʊɹ
 </span>
 </dt>
 <dd lang="en">
-Cape of Shags
+The Mountain Resembling a House
 </dd>
 <dd lang="pl">
-Przylądek Kormoranów
+Góra przypominająca dom
 </dd>
 </dl>
 <div id="map">
@@ -349,7 +361,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
-	const rotation = (code % 16) + -12;
+	const rotation = (code % 16);
 	// const rotation = -12;
 
 	try {
