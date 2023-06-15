@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="62.1333, -6.833">
+  <meta name=”geo.position” content="61.442778, -6.724444">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52155252052_5904a36942_o_d.jpg
+			https://live.staticflickr.com/65535/52974979495_6c78db1683_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 100%;
@@ -42,12 +42,12 @@
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: contrast(1.1) saturate(1.1) brightness(1.15) opacity(0.9);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
-		filter: contrast(1.1) saturate(1.2);
+		filter: contrast(1.1) saturate(1.05);
 
 		/* sizes / default with is 1067px  */
-		width: 1200px;
+		/* width: 1200px;
 		_background-size: inherit;
-		background-position: -30px 90%;
+		background-position: -30px 90%; */
 	}
 
 	dl {
@@ -187,12 +187,12 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.9;
 		width: 1600px;
 		height: 1600px;
-		background-position: -180px 0px; /** <-------------- **/
-		height: 1080px;
+		background-position: -50px -370px; /** <-------------- **/
+		height: 1450px;
 
-		/* filter: contrast(1.2) brightness(1.1) saturate(1.2); */
+		filter: contrast(1.3) brightness(1.1) saturate(1.1);
 		/* filter: contrast(1) brightness(1.1) saturate(1.2); */
-		filter: contrast(1.5) saturate(1.1);
+		/* filter: contrast(1.5) saturate(1.1); */
 	}
 
 	body.instagram dl {
@@ -325,7 +325,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Morskranes</em>
+<em>Víkarbyrgi</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
@@ -334,14 +334,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 -->
 <span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈmɔskɹaneːs
+'vʊikaɹˌbɪɹdʒɪ
 </span>
 </dt>
 <dd lang="en">
-Young Gull’s Cape
+Enclosure for animals by the bay
 </dd>
 <dd lang="pl">
-Przylądek mewy żółtonogiej
+Wybieg dla zwierząt przy zatoce
 </dd>
 </dl>
 <div id="map">
@@ -361,7 +361,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
-	const rotation = (code % 16) - 12;
+	const rotation = (code % 16) - 9;
 	// const rotation = -12;
 
 	try {
