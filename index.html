@@ -401,7 +401,10 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   L.marker([lat, lon]).addTo(map);
 
   // https://leaflet-extras.github.io/leaflet-providers/preview/#filter=Stamen.Watercolor
-  var tiles = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+  // migrate to:
+  // https://watercolormaps.collection.cooperhewitt.org/tile/watercolor/12/1205/1539.jpg
+  // @see https://maps.stamen.com/stadia-partnership/
+  var tiles = L.tileLayer('https://watercolormaps.collection.cooperhewitt.org/tile/watercolor/{z}/{x}/{y}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
 	minZoom: 1,
