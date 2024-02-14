@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/5102/5612556166_dfdba6ac42_o_d.jpg
+			https://live.staticflickr.com/65535/52160363522_5c5a6e4200_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 0px;
@@ -43,14 +43,14 @@
 		_filter: contrast(1.1) saturate(1.1) brightness(1.15) opacity(0.9);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
 		_filter: contrast(1.25) saturate(1.1) hue-rotate(3deg);
-		_filter: contrast(1.05) saturate(1.2) brightness(1.05) hue-rotate(8deg);
+		filter: contrast(1.07) saturate(1.2) brightness(1.05) hue-rotate(8deg);
 		_filter: hue-rotate(-2deg) saturate(0.9);
 		_filter: brightness(1.1) contrast(1.1) hue-rotate(1deg);
 
 		/* sizes / default with is 1067px  */
-		width: 1500px;
+		width: 1300px;
 		_background-size: inherit;
-		background-position: left 55%;
+		background-position: left 35%;
 	}
 
 	dl {
@@ -191,12 +191,12 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.9;
 		width: 1600px;
 		height: 1600px;
-		background-position: -650px -250px; /** <-------------- **/
-		height: 1600px;
+		background-position: -500px -150px; /** <-------------- **/
+		height: 1400px;
 		/* height: 1080px; */
 
 		/* filter: contrast(1.3) brightness(1.2) saturate(1.2); */
-		/* filter: contrast(1.05) brightness(0.8); */
+		filter: contrast(1.2) saturate(1.2);
 		/* filter: contrast(1.2) brightness(1.2); */
 		/* filter: contrast(1.1) hue-rotate(-3deg) brightness(.9); */
 	}
@@ -331,23 +331,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>vitlíki</em>
+<em>humla</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">h</span>
+<span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈviːtlʊiʃɪ
+ˈhʊmla
 </span>
 </dt>
 <dd lang="en">
-artificial intelligence
+bumblebee
 </dd>
 <dd lang="pl">
-sztuczna inteligencja
+trzmiel
 </dd>
 </dl>
 <div id="map">
@@ -367,8 +367,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
-	const rotation = (code % 16) - 4;
-	// const rotation = -12;
+	// const rotation = (code % 16) - 4;
+	const rotation = 12;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
