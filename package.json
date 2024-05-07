@@ -17,7 +17,7 @@
   },
   "homepage": "https://gist.github.com/d928b77911a416727c03a1a650fc748f",
   "dependencies": {
-    "imagemin": "^8.0.1",
+    "imagemin": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "npmlog": "^7.0.1",
     "puppeteer": "^22.8.0"
