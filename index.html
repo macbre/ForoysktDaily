@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="62.1183, -6.9056">
+  <!-- <meta name=”geo.position” content="62.1183, -6.9056"> -->
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/53536999675_11de370bfc_o_d.jpg
+			https://live.staticflickr.com/65535/53715951055_ddb8b18233_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 100%;
@@ -42,15 +42,15 @@
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: contrast(1.1) saturate(1.1) brightness(1.15) opacity(0.9);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
-		filter: contrast(1.15) saturate(1.2) hue-rotate(-2deg) brightness(.95);
+		_filter: contrast(1.15) saturate(1.2) hue-rotate(-2deg) brightness(.95);
 		_filter: contrast(1.07) saturate(1.2) brightness(1.05) hue-rotate(8deg);
 		_filter: hue-rotate(-2deg) saturate(0.9);
 		_filter: brightness(1.1) contrast(1.1) hue-rotate(1deg);
 
 		/* sizes / default with is 1067px  */
-		width: 1300px;
+		width: 1750px;
 		_background-size: inherit;
-		background-position: left 35%;
+		background-position: -200px 20%;
 	}
 
 	dl {
@@ -191,8 +191,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.95;
 		width: 1600px;
 		height: 1600px;
-		background-position: -500px -275px; /** <-------------- **/
-		height: 1400px;
+		background-position: -700px -125px; /** <-------------- **/
+		/* height: 1400px; */
 		/* height: 1080px; */
 
 		/* filter: contrast(1.3) brightness(1.2) saturate(1.2); */
@@ -229,7 +229,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		padding: 5px 35px;
 		display: inline-block;
 		border-bottom: solid 8px rgba(114, 149, 190, .85);
-		letter-spacing: -0.06em;
+		letter-spacing: -0.03em;
 	}
 
 	body.instagram article dt .kind {
@@ -252,7 +252,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		transform: rotate(3deg);
 		transform-origin: left;
 		margin-top: -30px;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.04em;
 	}
 
 	body.instagram .instagram-ipa {
@@ -331,23 +331,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Kollafjørður</em>
+<em>várhagasólja</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">k</span>
+<span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈkɔtlaˌfjøːɹʊɹ
+vɔaːɹhɛaːjasœlja
 </span>
 </dt>
 <dd lang="en">
-Round Top Fjord
+Dandelion
 </dd>
 <dd lang="pl">
-Fiord Zaokrąglonego Szczytu
+Dmuchawiec
 </dd>
 </dl>
 <div id="map">
@@ -368,7 +368,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
 	// const rotation = (code % 16) - 4;
-	const rotation = 2;
+	const rotation = 7;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
