@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="62.2722, -6.6019">
+  <!-- <meta name=”geo.position” content="62.2722, -6.6019"> -->
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/52156848220_4056b924a2_o_d.jpg
+			https://live.staticflickr.com/65535/19669945333_e48dac3076_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 0%;
@@ -42,19 +42,19 @@
 		_filter: brightness(1.5) saturate(1) contrast(1.1);
 		_filter: contrast(1.1) saturate(1.1) brightness(1.15) opacity(0.9);
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
-		filter: contrast(1.1) saturate(1.0) hue-rotate(1deg);
+		_filter: contrast(1.1) saturate(1.0) hue-rotate(1deg);
 		_filter: contrast(1.07) saturate(1.2) brightness(1.05) hue-rotate(8deg);
 		_filter: hue-rotate(-2deg) saturate(0.9);
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		opacity: .9;
+		/* opacity: .95; */
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
-		width: 1150px;
+		width: 1350px;
 		_background-size: inherit;
-		background-position: -0px 10%;
+		background-position: -100px 60%;
 	}
 
 	dl {
@@ -198,8 +198,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.95;
 		/* width: 1600px; */
 		/* height: 1600px; */
-		background-position: -300px 0px; /** <-------------- **/
-		height: 1300px;
+		background-position: -350px 0px; /** <-------------- **/
+		height: 1200px;
 		/* height: 1080px; */
 
 		/* filter: contrast(1.3) brightness(1.2) saturate(1.2); */
@@ -218,7 +218,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 		/* top: -50px; left: 0px; */
 
-		/* rotated names at top */
+		/* rotated names at top *
 		transform: rotate(8deg);
 		transform-origin: bottom center;
 		background: none;
@@ -226,6 +226,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		left: -50px;
 		bottom: auto;
 		/**/
+
+		/* rotated on the right side */
+		transform: rotate(8deg);
+		transform-origin: bottom center;
+		background: none;
+		right: -350px;
+		left: auto;
+		bottom: -75px;
 	}
 
 	/* body.instagram article.up dl {
@@ -344,12 +352,12 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 <body _class="instagram">
 <div id="wrapper">
-<article class="up">
+<article _class="up">
 <div id="overlay"></div>
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Haraldssund</em>
+<em>bussskýli</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
@@ -358,14 +366,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 -->
 <span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈha.raltsunt
+ˈbʊsːkʊilɪ
 </span>
 </dt>
 <dd lang="en">
-Harald’s Sound
+bus shelter
 </dd>
 <dd lang="pl">
-Cieśnina Haralda
+wiata przystankowa
 </dd>
 </dl>
 <div id="map">
