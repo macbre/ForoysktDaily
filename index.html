@@ -30,10 +30,10 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/53921585203_62c0545d18_o_d.jpg
+			https://live.staticflickr.com/65535/54213216438_65df561b08_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 35%;
+		background-position: 0 50%;
 
 		/* filters  */
 		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.6);
@@ -44,11 +44,11 @@
 		_filter: brightness(1.1) contrast(0.8) saturate(1.2);
 		_filter: contrast(1.1) saturate(1.0) hue-rotate(1deg);
 		_filter: contrast(1.07) saturate(1.2) brightness(1.05) hue-rotate(8deg);
-		filter: hue-rotate(-4deg) saturate(0.92) brightness(1.25) contrast(1.05);
+		_filter: hue-rotate(-4deg) saturate(0.92) brightness(1.25) contrast(1.05);
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		/* opacity: .95; */
+		opacity: .95;
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
@@ -182,7 +182,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 	body.instagram #logo {
 		/* filter: invert(1) opacity(0.4); */
-		filter: invert(0) opacity(0.2);
+		/* filter: invert(0) opacity(0.2); */
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -198,7 +198,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.95;
 		/* width: 1600px; */
 		/* height: 1600px; */
-		background-position:  -500px 0px; /** <-------------- **/
+		background-position:  -540px 0px; /** <-------------- **/
 		/* height: 1200px; */
 		/* height: 1080px; */
 		/* height: 1350px; */
@@ -358,23 +358,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>sporsmalur</em>
+<em>savn</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind"></span>
+<span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈspoʃˌmɛːlʊɹ
+saun
 </span>
 </dt>
 <dd lang="en">
-narrow-gauge
+museum, collection
 </dd>
 <dd lang="pl">
-wąskotorowy
+muzeum, kolekcja
 </dd>
 </dl>
 <div id="map">
@@ -394,8 +394,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
-	const rotation = (code % 16) - 10;
-	// const rotation = -20;
+	// const rotation = (code % 16) - 10;
+	const rotation = 7;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
