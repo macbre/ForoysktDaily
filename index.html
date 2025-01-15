@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(image.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/54213216438_65df561b08_o_d.jpg
+			https://live.staticflickr.com/65535/54269100035_ba376c10bb_o_d.jpg
 		);
 		background-size: cover;
 		background-position: 0 50%;
@@ -48,7 +48,7 @@
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		opacity: .95;
+		/* opacity: .95; */
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
@@ -182,7 +182,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 	body.instagram #logo {
 		/* filter: invert(1) opacity(0.4); */
-		/* filter: invert(0) opacity(0.2); */
+		filter: invert(0) opacity(0.2);
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -198,7 +198,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.95;
 		/* width: 1600px; */
 		/* height: 1600px; */
-		background-position:  -540px 0px; /** <-------------- **/
+		background-position:  -240px 0px; /** <-------------- **/
 		/* height: 1200px; */
 		/* height: 1080px; */
 		/* height: 1350px; */
@@ -358,7 +358,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>savn</em>
+<em>skýggj</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
@@ -367,14 +367,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 -->
 <span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-saun
+skʊt͡ʃː
 </span>
 </dt>
 <dd lang="en">
-museum, collection
+cloud
 </dd>
 <dd lang="pl">
-muzeum, kolekcja
+chmura
 </dd>
 </dl>
 <div id="map">
@@ -394,8 +394,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
-	// const rotation = (code % 16) - 10;
-	const rotation = 7;
+	const rotation = (code % 16) - 10;
+	// const rotation = 7;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
