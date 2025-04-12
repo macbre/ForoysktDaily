@@ -30,10 +30,10 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/54372111705_febf54d49a_o_d.jpg
+			https://live.staticflickr.com/65535/54442701177_0bd4b8f13f_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 80%;
+		background-position: 0 0%;
 
 		/* filters  */
 		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.6);
@@ -48,15 +48,15 @@
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		/* filter: saturate(0.3) sepia(0.75) opacity(.4); */
+		filter: sepia(.2) saturate(1.1) opacity(.9);
 
 		/* opacity: .95;
 		background-color: #333; */
 
 		/* sizes / default with is 1067px  */
-		/* width: 1100px;
+		width: 1400px;
 		_background-size: inherit;
-		background-position: -0px 45%; */
+		background-position: 0px 55%;
 	}
 
 	dl {
@@ -67,7 +67,7 @@
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		background: linear-gradient(180deg, rgba(50,50,50,0) 0%, rgba(50,50,50,0.15) 25%, rgba(50,50,50,.35) 100%);
+		/* background: linear-gradient(180deg, rgba(50,50,50,0) 0%, rgba(50,50,50,0.15) 25%, rgba(50,50,50,.35) 100%); */
 		text-shadow: 0 0 10px black;
 		opacity: .85;
 		color: #fff;
@@ -183,8 +183,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		/* filter: invert(1) opacity(0.2); */
-		filter: invert(0) opacity(0.2);
+		filter: invert(1) opacity(0.3);
+		/* filter: invert(0) opacity(0.3); */
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -200,12 +200,12 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		/* opacity: 0.95; */
 		/** width: 2250px; /**/
 		/* height: 1600px; */
-		background-position:  -300px 0px; /** <-------------- **/
+		background-position:  -500px 0px; /** <-------------- **/
 		/* height: 1200px; */
 		/* height: 1080px; */
 		/* height: 1350px; */
 
-		/* filter: contrast(1.1); */
+		filter: contrast(1.1) sepia(.2);
 		/* filter: contrast(1.4) saturate(1.05) brightness(1.15); */
 		/* filter: contrast(1.35) brightness(1.2) saturate(1.15); */
 		/* filter: contrast(.95) saturate(1.1) brightness(1.2) hue-rotate(7deg); */
@@ -360,23 +360,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>hamar</em>
+<em>leyv</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">k</span>
+<span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈhɛaː.ma.ɹ
+lɛiːv
 </span>
 </dt>
 <dd lang="en">
-rock face
+leaf
 </dd>
 <dd lang="pl">
-skalna ściana
+liść
 </dd>
 </dl>
 <div id="map">
@@ -458,6 +458,11 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
 **/
 
 })();
+
+// Add #instagram anchor to the URL to see the instagram / Polish post format
+if (document.location.hash === '#instagram') {
+	document.body.classList.add('instagram');
+}
 </script>
 
 </body>
