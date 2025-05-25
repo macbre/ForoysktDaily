@@ -30,10 +30,10 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-			https://live.staticflickr.com/65535/54521315272_bb8d51021d_o_d.jpg
+			https://live.staticflickr.com/65535/54544911678_38f60f7d5f_o_d.jpg
 		);
 		background-size: cover;
-		background-position: 0 0%;
+		background-position: 0 100%;
 
 		/* filters  */
 		_filter: grayscale(.2) sepia(.3) contrast(0.99) saturate(1.6);
@@ -50,13 +50,13 @@
 
 		_filter: sepia(.25) saturate(.9) brightness(.9);
 
-		/* opacity: .95;
-		background-color: #333; */
+		opacity: .95;
+		background-color: #333;
 
 		/* sizes / default with is 1067px  */
-		width: 1350px;
+		width: 1150px;
 		_background-size: inherit;
-		background-position: -175px 60%;
+		/* background-position: -175px 60%; */
 	}
 
 	dl {
@@ -184,8 +184,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 
 	body.instagram #logo {
 		/* filter: invert(1) opacity(0.3); */
-		filter: invert(1) opacity(0.5);
-		/* filter: invert(0) opacity(0.3); */
+		/* filter: invert(1) opacity(0.5); */
+		filter: invert(0) opacity(0.3);
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -201,10 +201,10 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		/* opacity: 0.95; */
 		/** width: 2250px; /**/
 		/* height: 1600px; */
-		background-position:  -150px 0px; /** <-------------- **/
+		background-position:  -475px 0px; /** <-------------- **/
 		/* height: 1200px; */
 		/* height: 1080px; */
-		height: 1350px; background-position:  -300px -250px;
+		/* height: 1350px; background-position:  -300px -250px; */
 
 		filter: contrast(.9) saturate(1.05) hue-rotate(4deg) opacity(.95);
 		/* filter: contrast(1.4) saturate(1.05) brightness(1.15); */
@@ -361,23 +361,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>trøllakampur</em>
+<em>klistrimerki</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">k</span>
+<span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-tʰɹœtlakʰampʰʊɹ
+kʰlɪstɹɪmɛʃtʃɪ
 </span>
 </dt>
 <dd lang="en">
-fern
+sticker
 </dd>
 <dd lang="pl">
-paproć
+naklejka
 </dd>
 </dl>
 <div id="map">
@@ -397,8 +397,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0);
-	//const rotation = (code % 16) - 10;
-	const rotation = 9;
+	const rotation = (code % 16) - 10;
+	// const rotation = 9;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
