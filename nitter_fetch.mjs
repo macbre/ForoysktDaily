@@ -6,6 +6,7 @@ import log from 'npmlog';
 import puppeteer, {Page} from 'puppeteer';
 
 const DOMAIN = 'https://nitter.poast.org';
+// const DOMAIN = 'https://xcancel.com/';
 // const url = `${DOMAIN}/ForoysktDaily`;
 const url = `${DOMAIN}/ForoysktDaily/with_replies`;
 
@@ -40,7 +41,7 @@ async function getTweets(page) {
       return {
         link: DOMAIN + link.getAttribute('href'),
         date: link.getAttribute('title'), // e.g. Aug 13, 2024 · 10:28 PM UTC
-        content: node.querySelector('.media-body').innerText,
+        content: node.querySelector('.media-body').innerText + '',
         image: hasImage ? DOMAIN + node.querySelector('.still-image img')?.getAttribute('src') : undefined,
         image_large: hasImage ? DOMAIN + node.querySelector('.still-image')?.getAttribute('href') : undefined,
       };
@@ -56,6 +57,10 @@ async function getTweets(page) {
   // it will first load the page with HTTP 503 response, wait a bit and redirect to 200
   const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
+
+  // allow image requests to be intercepted and aborted to speed things up
+  await page.setRequestInterception(true);
+
   await page.setViewport({
     width: 640,
     height: 800,
@@ -66,6 +71,22 @@ async function getTweets(page) {
     if (!url.startsWith('data:')) {
       log.info('Response', `<${url}>`);
     }
+  });
+
+  // https://pptr.dev/guides/network-interception
+  page.on('request', interceptedRequest => {
+    if (interceptedRequest.isInterceptResolutionHandled()) return;
+    // info Response <https://nitter.poast.org/pic/pbs.twimg.com%2Fprofile_images%2F975808322808041476%2Fxi2OHzac_400x400.jpg>
+    // info Response <https://nitter.poast.org/pic/media%2FDcNZU6IW4AAtjyp.jpg%3Fname%3Dsmall%26format%3Dwebp>
+    if (
+      interceptedRequest.url().indexOf('/pic/media') > 0
+    ) {
+      interceptedRequest.abort();
+      return;
+    }
+    interceptedRequest.continue();
+    log.info('Request', `<${interceptedRequest.url()}>`);
+
   });
 
   page.on('console', msg => log.info('console.log', msg.text()));
@@ -96,6 +117,8 @@ async function getTweets(page) {
       break;
     }
 
+    log.info('Tweets', `[${tweets[0].date}] ${tweets[0].content.substring(0, 64)} ...`);
+
     // find the next page
     // https://pptr.dev/api/puppeteer.page._
     // e.g. <div class="show-more"><a href="?cursor=DAABCgABGc8Zjhs__-gKAAIYHyMxmpbRVwgAAwAAAAIAAA">Load more</a></div>
@@ -107,9 +130,12 @@ async function getTweets(page) {
       break;
     }
 
+    log.info('Click', `will click next`);
     await node.click();
-    await page.waitForNavigation();
-    await page.waitForNetworkIdle();
+
+    log.info('Click', `waiting for the next page`);
+    await page.waitForNavigation({timeout: 60_000}); // 60 sec
+    // await page.waitForNetworkIdle({timeout: 30_000}); // 30 sec
   }
 
   // store the all tweets
