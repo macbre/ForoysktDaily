@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <!-- <meta name=”geo.position” content="62.2964, -7.0125"> -->
+  <meta name=”geo.position” content="62.11122, -6.99460">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-			https://www.flickr.com/photo_download.gne?id=54418163161&secret=1b6de21d46&size=o&source=photoPageEngagement
+			https://www.flickr.com/photo_download.gne?id=54689175014&secret=59944035ec&size=o&source=photoPageEngagement
 		);
 		background-size: cover;
 		background-position: 0 60%;
@@ -48,15 +48,15 @@
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		_filter: contrast(1.1) opacity(.9) hue-rotate(10deg);
+		filter: contrast(1.1) hue-rotate(5deg);
 
 		opacity: .95;
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
-		width: 1600px;
+		/* width: 1200px;
 		_background-size: inherit;
-		background-position: 0px -250px;
+		background-position: -100px 20%; */
 	}
 
 	dl {
@@ -184,9 +184,9 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		filter: invert(1) opacity(0.3);
+		/* filter: invert(1) opacity(0.3); */
 		/* filter: invert(1) opacity(0.5); */
-		/* filter: invert(0) opacity(0.3); */
+		filter: invert(0) opacity(0.3);
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -207,13 +207,13 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		background-position:  -50px 0px; /** <-------------- **/
 		height: 1100px;
 		/* height: 1080px; */
-		height: 1600px; background-position: -450px -400px;
-		/* height: 1300px; background-position: -130px -120px; */
+		/* height: 1600px; background-position: -950px -100px; */
+		height: 1200px; background-position: -700px -50px;
 		/* height: 1080px;background-position: -100px 0px; */
 
 
-		filter: contrast(.9);
-		/* filter: contrast(1.4) saturate(1.05) brightness(1.15); */
+		/* filter: contrast(.9); */
+		filter: contrast(1.1);
 		/* filter: contrast(1.35) brightness(1.2) saturate(1.15); */
 		/* filter: contrast(.95) saturate(1.1) brightness(1.2) hue-rotate(7deg); */
 	}
@@ -367,23 +367,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>bergmál</em>
+<em>Sátan</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">h</span>
+<span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈpɛɹkˌmɔɑːl
+ˈsɔɑːʰtan
 </span>
 </dt>
 <dd lang="en">
-echo
+The Haystack
 </dd>
 <dd lang="pl">
-echo
+Stóg Siana
 </dd>
 </dl>
 <div id="map">
@@ -402,7 +402,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
 
   // rotate the tiles for instagram
   function rotateTheTiles() {
-  	const code = word.charCodeAt(0);
+  	const code = word.charCodeAt(0) + word.charCodeAt(1) + word.charCodeAt(2);
 	const rotation = (code % 16) - 10;
 	// const rotation = 7;
 
