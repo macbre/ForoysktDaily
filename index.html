@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-			https://www.flickr.com/photo_download.gne?id=54661458370&secret=ede521dec6&size=o&source=photoPageEngagement
+			https://i0.wp.com/farerskiekadry.pl/wp-content/uploads/2025/07/Kirkja-gemela-scaled.jpg
 		);
 		background-size: cover;
 		background-position: 0 70%;
@@ -48,15 +48,15 @@
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		filter: contrast(.75) hue-rotate(15deg);
+		_filter: contrast(.75) hue-rotate(15deg);
 
-		opacity: .9;
+		opacity: .95;
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
 		width: 1600px;
 		_background-size: inherit;
-		background-position: -250px 70%;
+		background-position: -450px 90%;
 	}
 
 	dl {
@@ -184,9 +184,9 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		filter: invert(1) opacity(0.3);
+		/* filter: invert(1) opacity(0.3); */
 		/* filter: invert(1) opacity(0.5); */
-		/* filter: invert(0) opacity(0.3); */
+		filter: invert(0) opacity(0.3);
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -203,9 +203,9 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		/** width: 2250px; /**/
 
 		/** ------- default height: 1080px ------- */
-		height: 1600px;
-		background-position:  -400px -380px; /** <-------------- **/
-		/* height: 1400px; */
+		/* height: 1600px; */
+		background-position:  -950px -320px; /** <-------------- **/
+		height: 1400px;
 		/* height: 1080px; */
 		/* height: 1200px; background-position: -300px -120px; */
 		/* height: 1200px; background-position: -100px -120px; */
@@ -375,23 +375,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>sólarmyrking</em>
+<em>trøllabøli</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">kv</span>
+<span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-sɔuːlaˈɹmɪɹ̥kɪŋk
+tʰɹœtlabølɪ
 </span>
 </dt>
 <dd lang="en">
-solar eclipse
+untidy place
 </dd>
 <dd lang="pl">
-zaćmienie Słońca
+bałagan
 </dd>
 </dl>
 <div id="map">
@@ -412,7 +412,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   function rotateTheTiles() {
   	const code = word.charCodeAt(0) + word.charCodeAt(1) + word.charCodeAt(2);
 	// const rotation = (code % 16) - 10;
-	const rotation = 7;
+	const rotation = 18;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
