@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <meta name=”geo.position” content="62.2008, -6.7408">
+  <meta name=”geo.position” content="62.1586, -6.7531">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-			https://www.flickr.com/photo_download.gne?id=54705809244&secret=2167d188f5&size=o&source=photoPageEngagement
+			https://www.flickr.com/photo_download.gne?id=54773449254&secret=576dbfd896&size=o&source=photoPageEngagement
 		);
 		background-size: cover;
 		background-position: 0 80%;
@@ -54,9 +54,9 @@
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
-		/* width: 1600px;
+		width: 1900px;
 		_background-size: inherit;
-		background-position: -450px 90%; */
+		background-position: -750px 20%;
 	}
 
 	dl {
@@ -207,13 +207,13 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		/** background-position:  -250px 0px; /** <-------------- **/
 		/* height: 1400px; */
 		/* height: 1080px; */
-		height: 1300px; background-position: -650px -200px;
-		/* height: 1200px; background-position: -100px -120px; */
+		/* height: 1400px; background-position: -1000px -200px; */
+		height: 1200px; background-position: -750px -50px;
 		/* height: 1080px;background-position: -100px 0px; */
 
 
 		/* filter: contrast(.9); */
-		filter: contrast(1.05) brightness(1.15);
+		/* filter: contrast(1.05) brightness(1.15); */
 		/* filter: contrast(1.35) brightness(1.2) saturate(1.15); */
 		/* filter: contrast(.95) saturate(1.1) brightness(1.2) hue-rotate(7deg); */
 	}
@@ -375,23 +375,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Norðragøta</em>
+<em>Søldarfjørður</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">kv</span>
+<span class="kind">k</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-ˈnoːɹaˌgøːta
+ˈsœldaɹˌfjøːɹʊɹ
 </span>
 </dt>
 <dd lang="en">
-Northern Path
+Sølmundur's Fjord
 </dd>
 <dd lang="pl">
-Północna Ścieżka
+Fiord Sølmundura
 </dd>
 </dl>
 <div id="map">
@@ -411,7 +411,7 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0) + word.charCodeAt(1) + word.charCodeAt(2);
-	const rotation = (code % 16) - 10;
+	const rotation = (code % 16); // - 10;
 	// const rotation = 18;
 
 	try {
