@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <!-- <meta name=”geo.position” content="62.2797, -6.3486"> -->
+  <meta name=”geo.position” content="62.172 -6.765">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-			https://www.flickr.com/photo_download.gne?id=54982139041&secret=e4bbe55ac9&size=o&source=photoPageEngagement
+			https://farerskiekadry.pl/wp-content/uploads/2025/12/Skipanes-scaled.jpg
 		);
 		background-size: cover;
 		background-position: 0 10%;
@@ -56,7 +56,7 @@
 		/* sizes / default with is 1067px  */
 		width: 2400px;
 		_background-size: inherit;
-		background-position: -180px 32%;
+		background-position: 0 65%;
 	}
 
 	dl {
@@ -184,9 +184,9 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		/* filter: invert(1) opacity(0.3); */
+		filter: invert(1) opacity(0.3);
 		/* filter: invert(1) opacity(0.5); */
-		filter: invert(0) opacity(0.2);
+		/* filter: invert(0) opacity(0.2); */
 		/* background-blend-mode: lighten; */
 		width: 450px;
 		position: absolute;
@@ -203,16 +203,15 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		/** width: 2250px; /**/
 
 		/** ------- default height: 1080px ------- */
-		/* height: 1600px; */
-		/* background-position:  -450px 0px; /** <-------------- **/
+		/* height: 1200px; */
+		background-position: -1020px -580px; /** <-------------- */
 		/* height: 1400px; */
 		/* height: 1080px; */
-		height: 2300px; background-position: -350px -320px;
+		/* height: 2300px; background-position: -350px -320px; */
 		/* height: 1200px; background-position: -500px -120px; */
 		/* height: 1080px;background-position: -200px 0px; */
 
-
-		/* filter: contrast(1.2); */
+		/* filter: contrast(.9); */
 		/* filter: contrast(1.05) brightness(1.15); */
 		/* filter: contrast(1.35) brightness(1.2) saturate(1.15); */
 		/* filter: contrast(1.15) hue-rotate(-4deg); */
@@ -375,7 +374,7 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Týskland</em>
+<em>Skipanes</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
@@ -384,14 +383,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 -->
 <span class="kind">h</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-tʰʊiʃˌlant
+ʃiːpaneːs
 </span>
 </dt>
 <dd lang="en">
-Germany
+headland of ships
 </dd>
 <dd lang="pl">
-Niemcy
+Przylądek Łodzi
 </dd>
 </dl>
 <div id="map">
@@ -411,8 +410,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0) + word.charCodeAt(1) + word.charCodeAt(2);
-	const rotation = (code % 16) - 5;
-	// const rotation = 9;
+	// const rotation = (code % 16) - 5;
+	const rotation = 9;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
