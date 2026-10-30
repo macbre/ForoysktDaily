@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-  <!-- <meta name=”geo.position” content="62.172 -6.765"> -->
+   <meta name=”geo.position” content="61.7667, -6.8000">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-        	https://www.flickr.com/photo_download.gne?id=55357527110&secret=9d2c1f65eb&size=o&source=photoPageEngagement
+        	https://www.flickr.com/photo_download.gne?id=55447359963&secret=01c7de49ab&size=o&source=photoPageEngagement
 		);
 		background-size: cover;
 		/*background-position: 0 10%;*/
@@ -48,7 +48,7 @@
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		_filter: contrast(1.15) hue-rotate(-15deg);
+		filter: contrast(1.1) hue-rotate(5deg);
 
 		/*opacity: .95;*/
 		background-color: #333;
@@ -56,7 +56,7 @@
 		/* sizes / default with is 1067px  */
 		width: 1200px;
 		/*_background-size: inherit;*/
-		background-position: left 80%;
+		background-position: -120px 0;
 	}
 
 	dl {
@@ -67,7 +67,7 @@
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		/*background: linear-gradient(180deg, rgba(50,50,50,0) 0%, rgba(50,50,50,0.1) 25%, rgba(50,50,50,.25) 100%);*/
+		background: linear-gradient(180deg, rgba(50,50,50,0) 0%, rgba(50,50,50,0.1) 25%, rgba(50,50,50,.25) 100%);
 		text-shadow: 0 0 10px black;
 		opacity: .85;
 		color: #fff;
@@ -184,8 +184,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		 filter: invert(1) opacity(0.5);
-		/*filter: invert(1) opacity(0.5);*/
+		 /*filter: invert(1) opacity(0.5);*/
+		filter: invert(1) opacity(0.7);
 		/*filter: invert(0) opacity(0.2);*/
 		/* background-blend-mode: lighten; */
 		width: 450px;
@@ -202,19 +202,19 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		opacity: 0.97;
 		/** width: 2250px; /**/
 
-		height: 1300px;
+		/*height: 1300px;*/
 		/*background-position: 0px 0px; !** <-------------- *!*/
 
 		/** ------- default height: 1080px ------- */
 		/* height: 1200px; */
 		/*background-position: -1020px -580px; /** <-------------- */
-		/* height: 1400px; */
+		/*height: 1400px;*/
 		/* height: 1080px; */
 		/* height: 2300px; background-position: -350px -320px; */
-		height: 1300px; background-position: 30% -220px;
+		height: 1500px; background-position: 60% 0;
 		/* height: 1080px;background-position: -200px 0px;*/
 
-		filter: contrast(.8);
+		filter: contrast(.95) hue-rotate(8deg);
 		/* filter: contrast(1.05) brightness(1.15); */
 		/* filter: contrast(1.35) brightness(1.2) saturate(1.15); */
 		/*filter: contrast(1.15) hue-rotate(-25deg);*/
@@ -377,23 +377,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>bringureyði</em>
+<em>Skúvoy</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">k</span>
+<span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-brɪŋkurɛːjɛ
+skʉuvɔi
 </span>
 </dt>
 <dd lang="en">
-robin
+Skua Island
 </dd>
 <dd lang="pl">
-rudzik
+Wyspa Wydrzyka
 </dd>
 </dl>
 <div id="map">
@@ -413,8 +413,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0) + word.charCodeAt(1) + word.charCodeAt(2);
-	// const rotation = (code % 16) - 5;
-	const rotation = 15;
+	const rotation = (code % 16) - 5;
+	// const rotation = 15;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
