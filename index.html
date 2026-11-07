@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@500&display=swap" rel="stylesheet">
 
   <!-- https://github.com/macbre/faroese-resources/blob/master/data/villages.json -->
-   <meta name=”geo.position” content="62.2953, -6.5161">
+   <meta name=”geo.position” content="61.8106, -6.6764">
 
   <style>
 	html, body { margin: 0; padding: 0 }
@@ -30,7 +30,7 @@
 	    height: 100%;
 		_background-image: url(alfrod.jpg);
 		background-image: url(
-        	https://www.flickr.com/photo_download.gne?id=52156628079&secret=5905fd1f77&size=o&source=photoPageEngagement
+        	https://www.flickr.com/photo_download.gne?id=55456204650&secret=1f78b55d6b&size=o&source=photoPageEngagement
 		);
 		background-size: cover;
 		/*background-position: 0 10%;*/
@@ -48,15 +48,15 @@
 		_filter: brightness(1.2) contrast(1.1) saturate(1.2) sepia(0.1);
 		_filter: hue-rotate(0deg) saturate(1.1) contrast(1.25) brightness(1.2);
 
-		filter: contrast(1.1) hue-rotate(-2deg);
+		filter: brightness(1.3) contrast(1.1) hue-rotate(2deg);
 
 		opacity: .95;
 		background-color: #333;
 
 		/* sizes / default with is 1067px  */
-		width: 1350px;
+		width: 1250px;
 		/*_background-size: inherit;*/
-		background-position: -150px -300px;
+		background-position: -150px 70%;
 	}
 
 	dl {
@@ -67,7 +67,7 @@
 		bottom: 0;
 		left: 0;
 		width: 967px;
-		_background: linear-gradient(180deg, rgba(50,50,50,0) 0%, rgba(50,50,50,0.1) 25%, rgba(50,50,50,.25) 100%);
+		background: linear-gradient(180deg, rgba(50,50,50,0) 0%, rgba(50,50,50,0.1) 25%, rgba(50,50,50,.25) 100%);
 		text-shadow: 0 0 10px black;
 		opacity: .85;
 		color: #fff;
@@ -184,8 +184,8 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 	}
 
 	body.instagram #logo {
-		 /*filter: invert(1) opacity(0.5);*/
-		filter: invert(1) opacity(0.4);
+		 filter: invert(1) opacity(0.6);
+		/*filter: invert(1) opacity(0.4);*/
 		/*filter: invert(0) opacity(0.2);*/
 		/* background-blend-mode: lighten; */
 		width: 450px;
@@ -211,13 +211,14 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		/*height: 1400px;*/
 		/* height: 1080px; */
 		/* height: 2300px; background-position: -350px -320px; */
-		height: 1200px; background-position: 30% 0px;
+		height: 1300px; background-position: 60% -220px;
 		/* height: 1080px;background-position: -200px 0px;*/
 
 		/*filter: contrast(.95) hue-rotate(8deg);*/
 		/* filter: contrast(1.05) brightness(1.15); */
 		/* filter: contrast(1.35) brightness(1.2) saturate(1.15); */
-		filter: contrast(1.2) hue-rotate(-10deg);
+		/*filter: contrast(1.2) hue-rotate(-10deg);*/
+		filter: brightness(1.3) contrast(1.1) hue-rotate(2deg);
 	}
 
 	body.instagram dl {
@@ -247,8 +248,9 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 		left: auto;
 		bottom: -75px; */
 
-		top: 220px;
-		bottom: 0;
+		/* up */
+		/*top: 220px;*/
+		/*bottom: 0;*/
 	}
 
 	/* body.instagram article.up dl {
@@ -380,23 +382,23 @@ At a standard width of 1080 pixels, Instagram keeps your photo its original size
 <img id="logo" src="logo.png" />
 <dl>
 <dt>
-<em>Hvannasund</em>
+<em>Húsavík</em>
 <!--
 	k	kallkyn; masculine
 	kv	kvennkyn; feminine
 	h	hvørkikyn; neuter
 	flt fleirtal; plural
 -->
-<span class="kind">h</span>
+<span class="kind">kv</span>
 <span class="ipa"><!-- https://en.wikipedia.org/wiki/Faroese_language -->
-kvanːasʊnd
+hʉusavʊik
 </span>
 </dt>
 <dd lang="en">
-Angelica’s Strait
+Houses Bay
 </dd>
 <dd lang="pl">
-Cieśnina Dzięgli
+Zatoka Domów
 </dd>
 </dl>
 <div id="map">
@@ -416,8 +418,8 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a><!--, under <a href="h
   // rotate the tiles for instagram
   function rotateTheTiles() {
   	const code = word.charCodeAt(0) + word.charCodeAt(1) + word.charCodeAt(2);
-	// const rotation = 8 - (code % 16);
-	const rotation = 8;
+	const rotation = 8 - (code % 16);
+	// const rotation = 8;
 
 	try {
 		document.querySelector('body.instagram article dt').style.transform = `rotate(${rotation}deg)`;
